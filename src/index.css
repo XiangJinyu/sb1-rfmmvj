@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Press Start 2P', cursive;
+  }
+}
+
+@layer components {
+  .pixel-border {
+    box-shadow: 0 0 0 4px #4A4A4A;
+    image-rendering: pixelated;
+  }
+}
+
+@layer utilities {
+  .pixel-text {
+    text-shadow: 2px 2px 0 #A39E9B;
+  }
+}
+
+body {
+  image-rendering: pixelated;
+  background-image: 
+    linear-gradient(45deg, #D4B8AA 25%, transparent 25%),
+    linear-gradient(-45deg, #D4B8AA 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #D4B8AA 75%),
+    linear-gradient(-45deg, transparent 75%, #D4B8AA 75%);
+  background-size: 32px 32px;
+  background-position: 0 0, 0 16px, 16px -16px, -16px 0px;
+}
